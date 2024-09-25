@@ -1,0 +1,29 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h3>{{ title }}</h3>
+<!-- add-breadcrumbs -->
+<h4>Flight Details</h4>
+ <div>
+  <ul>
+    <li>Airplane: {{doc.airplane}}</li>
+    <li>
+      <span>{{doc.destination_airport_code}}</span>
+				<span>&rarr;</span>
+				<span>{{doc.source_airport_code}}</span>
+    </li>
+    <li>
+      <span>{{ frappe.format_date(doc.date_of_departure) }}</span>
+			<span>|</span>
+			<span>{{doc.time_of_departure}}</span>	
+    </li>
+    <li>Duration: <span class="time">
+     {{frappe.utils.format_duration(doc.duration)}}
+    </span>
+</li>
+  </ul>
+  <a href="/book-ticket" role="button" style="display: inline-block; padding:8px 12px; background-color: rgb(17, 247, 247); border-radius: 8px; text-decoration: none;">Book Now</a>
+ </div>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

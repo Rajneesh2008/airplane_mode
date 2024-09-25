@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+</head>
+<style>
+.row-container{
+	display: flex;
+	flex-direction: column;
+	padding:0px ;
+	margin-bottom: 8px;
+	letter-spacing:2px ;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.child-row-container{
+	padding: 10px 20px;
+}
+.title{
+	padding-top: 0px;
+	margin: 0px;
+}
+.source-destination-container{
+	display: inline-flex;
+}
+.flight-Booking-page{
+	padding: 5px 8px;
+	text-decoration: none;
+	background:rgb(239, 239, 239);
+	color: rgb(6, 193, 250);
+	border-radius: 8px;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+.flight-Booking-page::after {
+	content: ''; /* No content initially */
+	opacity: 0; /* Hidden by default */
+	transition: opacity 0.3s ease; /* Smooth transition */
+	padding-left: 5px;
+}
+.flight-Booking-page:hover::after {
+	content: '→'; /* Right arrow when hovered */
+	opacity: 1; /* Make it visible */
+}
+.flight-departure-details{
+	display: flex;
+	padding-left: 3px;
+}
+
+.flight-departure-details p{
+	font-size: 14px;
+	font-weight:400;
+	font:800;
+}
+.time{
+	display: flex;
+	margin-left: 2px;
+}
+
+
+
+</style>
+<body>
+	<div class="row-container">
+
+
+		<div class="child-row-container">
+
+			<h4 class="title">{{doc.airplane or doc.name}}</h4>
+
+
+			<div class="source-destination-container">
+				<p>{{doc.destination_airport_code}}</p>
+				<p>&rarr;</p>
+				<p>{{doc.source_airport_code}}</p>
+			</div>
+
+
+			<div class="flight-departure-details">
+				<span>{{ frappe.format_date(doc.date_of_departure) }}</span>
+				<span> | </span>
+				<div class="time">
+					<span class="time">
+						{{frappe.utils.format_duration(doc.duration)}}
+					 </span>
+				</div>
+
+			</div>
+			<div>
+				<a class="flight-Booking-page" href="{{ doc.route }}">view flight</a>
+
+			</div>
+		</div>
+		</div>
+</body>
+</html>
+<!-- this is a sample default list template -->
