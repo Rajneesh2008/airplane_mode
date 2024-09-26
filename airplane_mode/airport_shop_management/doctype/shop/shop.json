@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_name}/{shop_number}/{contract_start_date}",
+ "creation": "2024-09-25 12:52:04.327232",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_name",
+  "airport_name",
+  "contract_start_date",
+  "rent_amount",
+  "column_break_yshp",
+  "shop_number",
+  "physical_area",
+  "contract_expiry_date",
+  "is_leased",
+  "tenant"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number ",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "physical_area",
+   "fieldtype": "Float",
+   "label": "Physical Area",
+   "non_negative": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_leased",
+   "fieldtype": "Check",
+   "label": "Is Leased"
+  },
+  {
+   "fieldname": "airport_name",
+   "fieldtype": "Link",
+   "label": "Airport Name",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount",
+   "non_negative": 1,
+   "options": "INR",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Date",
+   "label": "Contract Expiry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yshp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-26 10:32:43.532859",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

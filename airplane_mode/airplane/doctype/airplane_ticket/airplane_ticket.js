@@ -28,6 +28,11 @@ frappe.ui.form.on("Airplane Ticket", {
 	},
 });
 
+frappe.ui.form.on("Airplane Ticket", {
+  refresh(frm) {
+
+	}
+});
 
 frappe.ui.form.on("Airplane Ticket Add-on Item", {
   

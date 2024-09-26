@@ -23,7 +23,10 @@
   "date_of_departure",
   "duration",
   "column_break_imfr",
-  "time_of_departure"
+  "time_of_departure",
+  "gate_no",
+  "section_break_zvsa",
+  "crew_members"
  ],
  "fields": [
   {
@@ -131,6 +134,21 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "section_break_zvsa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Crew Member"
+  },
+  {
+   "fieldname": "gate_no",
+   "fieldtype": "Data",
+   "label": "Gate No."
   }
  ],
  "has_web_view": 1,
@@ -143,7 +161,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-09-24 19:00:34.563666",
+ "modified": "2024-09-25 10:50:44.599964",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Flight",

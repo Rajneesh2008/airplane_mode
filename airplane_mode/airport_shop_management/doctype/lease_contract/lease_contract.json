@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop}-{tenant}-{###}",
+ "creation": "2024-09-25 16:50:05.158308",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "shop",
+  "rent_amount",
+  "contract_start_date",
+  "contract_expiry_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "shop.rent_amount",
+   "fieldname": "rent_amount",
+   "fieldtype": "Read Only",
+   "label": "Rent Amount"
+  },
+  {
+   "fetch_from": "shop.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Read Only",
+   "label": "Contract Start Date ",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.contract_expiry_date",
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Read Only",
+   "label": "Contract Expiry Date",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-26 09:57:06.393369",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Lease Contract",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

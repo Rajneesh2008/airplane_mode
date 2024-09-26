@@ -19,6 +19,7 @@
   "duration_of_flight",
   "column_break_qdms",
   "departure_time",
+  "gate_no",
   "status_section",
   "add_ons_column",
   "amended_from",
@@ -158,11 +159,18 @@
    "label": "Destination Airport Code",
    "options": "Airplane Flight",
    "reqd": 1
+  },
+  {
+   "fetch_from": "flight.gate_no",
+   "fieldname": "gate_no",
+   "fieldtype": "Read Only",
+   "label": "Gate No.",
+   "options": "Airplane Flight"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-24 18:59:51.748784",
+ "modified": "2024-09-25 10:52:50.656968",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Ticket",

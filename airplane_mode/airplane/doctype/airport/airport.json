@@ -8,7 +8,8 @@
  "field_order": [
   "code",
   "city",
-  "country"
+  "country",
+  "shops"
  ],
  "fields": [
   {
@@ -31,11 +32,17 @@
    "in_list_view": 1,
    "label": "Country",
    "reqd": 1
+  },
+  {
+   "fieldname": "shops",
+   "fieldtype": "Table",
+   "label": "Shops",
+   "options": "Shop List"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-24 19:01:44.118562",
+ "modified": "2024-09-25 16:02:09.096984",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airport",
