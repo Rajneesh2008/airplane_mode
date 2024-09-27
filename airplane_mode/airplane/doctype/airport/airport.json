@@ -8,8 +8,8 @@
  "field_order": [
   "code",
   "city",
-  "country",
-  "shops"
+  "column_break_mlrv",
+  "country"
  ],
  "fields": [
   {
@@ -34,15 +34,18 @@
    "reqd": 1
   },
   {
-   "fieldname": "shops",
-   "fieldtype": "Table",
-   "label": "Shops",
-   "options": "Shop List"
+   "fieldname": "column_break_mlrv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-09-25 16:02:09.096984",
+ "links": [
+  {
+   "link_doctype": "Shop",
+   "link_fieldname": "airport_name"
+  }
+ ],
+ "modified": "2024-09-26 14:45:01.094278",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airport",

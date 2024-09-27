@@ -16,7 +16,9 @@
   {
    "fieldname": "tenant",
    "fieldtype": "Link",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Tenant",
    "options": "Tenant",
    "reqd": 1
@@ -53,7 +55,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-26 09:57:06.393369",
+ "modified": "2024-09-27 06:55:45.475293",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Lease Contract",

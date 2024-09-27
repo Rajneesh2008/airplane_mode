@@ -10,9 +10,7 @@
   "email",
   "phone_number",
   "column_break_ipzi",
-  "address",
-  "section_break_alex",
-  "shops_table"
+  "address"
  ],
  "fields": [
   {
@@ -44,21 +42,20 @@
    "fieldname": "phone_number",
    "fieldtype": "Phone",
    "label": "Phone Number"
-  },
-  {
-   "fieldname": "section_break_alex",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "shops_table",
-   "fieldtype": "Table",
-   "label": "Leased Shops",
-   "options": "Shop List"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-09-25 15:02:46.321031",
+ "links": [
+  {
+   "link_doctype": "Shop",
+   "link_fieldname": "tenant"
+  },
+  {
+   "link_doctype": "Lease Contract",
+   "link_fieldname": "tenant"
+  }
+ ],
+ "modified": "2024-09-26 14:57:54.315687",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Tenant",

@@ -10,12 +10,15 @@
   "airport_name",
   "contract_start_date",
   "rent_amount",
+  "available_shop",
+  "status",
   "column_break_yshp",
   "shop_number",
   "physical_area",
   "contract_expiry_date",
-  "is_leased",
-  "tenant"
+  "tenant",
+  "total_shop",
+  "is_leach"
  ],
  "fields": [
   {
@@ -39,12 +42,6 @@
    "fieldtype": "Float",
    "label": "Physical Area",
    "non_negative": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "is_leased",
-   "fieldtype": "Check",
-   "label": "Is Leased"
   },
   {
    "fieldname": "airport_name",
@@ -80,13 +77,50 @@
   {
    "fieldname": "tenant",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_standard_filter": 1,
    "label": "Tenant",
    "options": "Tenant"
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Available\nOccupied",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "available_shop",
+   "fieldtype": "Int",
+   "label": "Available Shop",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_shop",
+   "fieldtype": "Int",
+   "label": "Total Shop",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_leach",
+   "fieldtype": "Check",
+   "label": "Is Leach",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-26 10:32:43.532859",
+ "modified": "2024-09-26 16:51:59.652088",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop",
