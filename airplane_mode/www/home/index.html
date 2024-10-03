@@ -1,0 +1,31 @@
+{% extends "templates/pages/base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="/assets/airplane_mode/css/home.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+       <h1 class="hero-title">Explore the World!
+            <br>
+             <span class="hero-sub-title">Find Your Next Adventure.</span>
+        </h1>
+       
+        <div class="hero-btn-container">
+                <button class="shoping "><a href="/shops">Shop Now</a></button>
+                <button class="booking "><a href="/flights">Book Now</a></button>
+        </div>
+                
+</div>
+
+{% endblock %}
+
+{% block base_scripts %}
+<script src="/assets/airplane_mode/js/home.js"></script>
+
+{% endblock %}

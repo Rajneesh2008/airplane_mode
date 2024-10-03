@@ -21,17 +21,36 @@ app_license = "mit"
 # 	}
 # ]
 
+
+# define the root 
+# website_route_rules = [
+#     {"from_route": "/", "to_route": "home"},
+#     {"from_route": "/available-shops", "to_route": "available_shops"},
+#     {"from_route": "/flights", "to_route": "flights"},
+#     {"from_route": "/flights/<name>", "to_route": "flights/[flight_id]"},
+#     {"from_route": "/book-flight-ticket/new", "to_route": "book_flight"},
+#     {"from_route": "/airports", "to_route": "airports"}
+# ]
+
+
 # Includes in <head>
 # ------------------
-
 # include js, css files in header of desk.html
 # app_include_css = "/assets/airplane_mode/css/airplane_mode.css"
 # app_include_js = "/assets/airplane_mode/js/airplane_mode.js"
-
+app_include_css = "/assets/airplane_mode/css/base.css"
+app_include_js = "/assets/airplane_mode/js/base.js"
+app_include_css = "/assets/airplane_mode/css/home.css"
+app_include_js = "/assets/airplane_mode/js/home.js"
+app_include_css = "/assets/airplane_mode/css/shop.css"
+app_include_js = "/assets/airplane_mode/js/shop.js"
 # include js, css files in header of web template
 # web_include_css = "/assets/airplane_mode/css/airplane_mode.css"
 # web_include_js = "/assets/airplane_mode/js/airplane_mode.js"
-
+web_include_css = "/assets/airplane_mode/css/home.css"
+web_include_js = "/assets/airplane_mode/js/home.js"
+web_include_css = "/assets/airplane_mode/css/shop.css"
+web_include_js = "/assets/airplane_mode/js/shop.js"
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "airplane_mode/public/scss/website"
 
@@ -40,7 +59,7 @@ app_license = "mit"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}

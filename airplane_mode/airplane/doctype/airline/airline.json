@@ -5,6 +5,7 @@
  "creation": "2024-09-16 12:37:43.343749",
  "doctype": "DocType",
  "engine": "InnoDB",
+ "custom":"1",
  "field_order": [
   "founding_year",
   "customer_care_number",

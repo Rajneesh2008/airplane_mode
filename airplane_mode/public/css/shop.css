@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #966e36;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Filter Form in a Single Row */
+.shop-filter-container {
+    background-color: #312913;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    max-width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccb4a5;
+}
+
+/* Form Elements in a Row */
+.shop-filter-container form {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* In case it doesn't fit in one line, it will wrap */
+    width: 100%;
+    justify-content: space-between;
+}
+
+.shop-filter-container label {
+    font-weight: bold;
+}
+
+.shop-filter-container input[type="number"],
+.shop-filter-container select {
+    padding: 10px;
+    border: 1px solid #525a24;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #525a24;
+    color: #fff;
+    width: 150px; /* Set a width so form elements align well */
+    box-sizing: border-box;
+}
+
+/* Submit Button Styling */
+.shop-filter-container button {
+    padding: 10px 20px;
+    background-color: #966e36;
+    color: #0d1c07;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*  Submit Button hover effect */
+.shop-filter-container button:hover {
+    background-color: #525a24;
+}
+
+/* Grid Layout for the Shop List */
+.shop-list {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+    padding: 20px;
+}
+
+/* Style for Each Shop */
+.shop-list .single-shop-container {
+    width: 100%;
+    display: flex;
+    background-color: #966e36;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.shop-detail-container{
+    padding:0 25px;
+}
+.shop-detail-container ul{
+margin-top: 20px;
+padding:0 10px;
+}
+.status-badge{
+position: absolute;
+z-index:5;
+top: -2px;
+left: -2px;
+padding: 2px 5px;
+background: #312913;
+color: #fff;
+font-size: 22px;
+font-weight: 500;
+}
+
+

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{shop}-{tenant}-{###}",
+ "autoname": "format:{shop}-{tenant}",
  "creation": "2024-09-25 16:50:05.158308",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -26,7 +26,9 @@
   {
    "fieldname": "shop",
    "fieldtype": "Link",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Shop",
    "options": "Shop",
    "reqd": 1
@@ -55,7 +57,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-27 06:55:45.475293",
+ "modified": "2024-10-02 08:43:00.233660",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Lease Contract",

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title block that can be overridden -->
+    <title>{% block title %}Home{% endblock %} </title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/assets/airplane_mode/css/base.css">
+    
+    <!-- Block for page-specific CSS -->
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+        <a href="/home">     
+            <img src="https://svgsilh.com/svg/1293790-ffffff.svg" alt="logo"
+            width="80px"
+            height="80px"
+            >
+           </a>
+        </div>
+        <div class="nav-link-container">
+            <a href="#" class="nav-link"> Airports</a>
+            <a href="/shops" class="nav-link">Shops</a>
+            <a href="/flights" class="nav-link" target="_blank" >Flights</a>
+            <a href="#" class="nav-link"> Contact-us</a>
+            <a href="#" class="nav-link"> About-us</a>
+        </div>
+     </nav>
+
+    <main id="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div>
+                <p>© 2024 Le Travenues Technology Ltd. India.
+                <br>        
+                All brands are trademarks of their respective owners.</p>
+        </div>
+        <ul class="term-condition">
+                <a href="#">
+                        <li>Privacy</li>    
+                </a>
+
+                <a href="#">
+                        <li> Terms of Use</li>
+
+                </a>
+                <a href="#">
+
+                        <li>Career</li>
+                </a>
+                <a href="#">
+
+                        <li>Customer Service</li>
+                </a>
+        </ul>
+        <div class="footer-logo">
+                <div>
+                        <img src="https://images.ixigo.com/image/upload/f_auto,h_90/footer/82a81e606bd92407a86f935c5d3fb772-gubxy.png" width="135px" height="30px" alt="playstore logo">
+                </div>
+                <div>
+                        <img src="https://images.ixigo.com/image/upload/f_auto,h_90/footer/828deb854e5a46e2e4672dc62b17d2ac-kukcx.png" width="135px" height="30px" alt="playstore logo">
+                </div>
+        </div>
+</footer>
+    
+    <!-- Common JavaScript -->
+    <script src="/assets/airplane_mode/js/base.js"></script>
+
+    <!-- Block for page-specific JavaScript -->
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
