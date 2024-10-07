@@ -1,10 +1,9 @@
-// shop.js
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('filter-form');  // Select the filter form
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the default form submission
+        event.preventDefault();  
 
         // Get filter values
         const status = document.getElementById('status').value;
@@ -25,6 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Redirect the user to the filtered URL
-        window.location.href = `${window.location.pathname}?${queryParams.toString()}`;
+        window.location.href = minRent || maxRent || status ?`${window.location.pathname}?${queryParams.toString()}`:window.location.pathname;
     });
 });

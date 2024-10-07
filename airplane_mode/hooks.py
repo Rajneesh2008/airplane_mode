@@ -23,14 +23,11 @@ app_license = "mit"
 
 
 # define the root 
-# website_route_rules = [
-#     {"from_route": "/", "to_route": "home"},
-#     {"from_route": "/available-shops", "to_route": "available_shops"},
-#     {"from_route": "/flights", "to_route": "flights"},
-#     {"from_route": "/flights/<name>", "to_route": "flights/[flight_id]"},
-#     {"from_route": "/book-flight-ticket/new", "to_route": "book_flight"},
-#     {"from_route": "/airports", "to_route": "airports"}
-# ]
+website_route_rules = [
+    {"from_route": "/", "to_route": "home"},
+    {"from_route": "/shops", "to_route": "shops"},
+    {"from_route": "/shops/<shop_number>", "to_route": "shops/[shop_id]"}
+]
 
 
 # Includes in <head>

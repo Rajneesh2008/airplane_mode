@@ -32,7 +32,7 @@ def get_context(context):
     # Fetch  all filtered shops
     shops = frappe.get_list('Shop',
                             filters=filters,
-                            fields=['shop_name', 'shop_number', 'status', 'rent_amount', 'tenant', 'contract_start_date', 'contract_expiry_date'])
+                            fields=['name','shop_name', 'shop_number', 'status', 'rent_amount', 'tenant', 'contract_start_date', 'contract_expiry_date'])
 
     # Add shops to the context
     context.shops = shops
