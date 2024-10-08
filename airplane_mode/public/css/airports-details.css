@@ -1,0 +1,64 @@
+/* Container for flights */
+.flights-container {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ccb4a5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 24px;
+    color: #525a24;
+    margin-bottom: 15px;
+}
+
+/* No Flights Message */
+.no-flights {
+    color: #966e36;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Flight List Container */
+.flights-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Flight Card */
+.flight-card {
+    background-color: #525a24;
+    color: #ccb4a5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Flight Card Text */
+.flight-card p {
+    margin: 10px 0;
+}
+
+/* Strong Text for Flight Details */
+.flight-card p strong {
+    color: #966e36;
+}
+
+/* Typography */
+body, h2 {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}

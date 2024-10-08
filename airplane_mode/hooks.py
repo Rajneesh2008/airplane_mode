@@ -26,7 +26,9 @@ app_license = "mit"
 website_route_rules = [
     {"from_route": "/", "to_route": "home"},
     {"from_route": "/shops", "to_route": "shops"},
-    {"from_route": "/shops/<shop_number>", "to_route": "shops/[shop_id]"}
+    {"from_route": "/shops/<shop_id>", "to_route": "shops/[shop_id]"},
+    {"from_route":"/airports", "to_route":"airports"},
+    {"from_route":"/airports/<airports>", "to_route":"airports/[airports]"}
 ]
 
 

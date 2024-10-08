@@ -4,8 +4,44 @@
 Airports
 {% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="/assets/airplane_mode/css/airports.css">
+{% endblock %}
 
 {% block content %}
+<div class="airports-container">
+    <h1 class="airport-title">Airports</h1>
+    {% if airports %}
+    {% for airport in airports %}
+    <div class="airport-item">
+        <div class="airport-card">
+            <div class="logo-container">
+                <img src="https://svgsilh.com/svg/153136-ffffff.svg" width="200px" height="100px" alt="Airport Logo">
+                <h2>{{airport.name}}</h3>
+            </div>
+            <div class="arrow-container" onclick="toggleDetails(this)">
+                <div class="drop-down arrow-down">
+                    ↓
+                </div>
+                <div class="drop-down arrow-up hidden">
+                    ↑
+                </div>
+            </div>
+        </div>
+        <div class="airport-details hidden">
+            <div class="airport-details-card">
+                <p>City : {{airport.city}}</p>
+                <p>Airport Code : {{airport.code}}</p>
+                <p>country : {{airport.country}}</p>
+                <a href="/airports/{{airport.name | urlencode  }}" class="link-flight-show">Show Flights</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
 
-
+{% block scripts %}
+<script src="/assets/airplane_mode/js/airports.js"></script>
 {% endblock %}

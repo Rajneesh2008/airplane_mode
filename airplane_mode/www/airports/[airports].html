@@ -1,0 +1,51 @@
+{% extends "templates/pages/base.html" %}
+
+{% block title%}
+Airplanes
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/airplane_mode/css/airports-details.css">
+{% endblock %}
+
+{% block content%}
+<div class="flights-container">
+    <!-- Source Airport Flights -->
+    {% if source_flights %}
+        <h2 class="section-heading">Source Airport Flights</h2>
+        <div class="flights-list">
+            {% for flight in source_flights %}
+                <div class="flight-card">
+                    <p><strong>Airplane:</strong> {{flight.airplane}}</p>
+                    <p><strong>Date of Departure:</strong> {{ frappe.format_date(flight.date_of_departure) }} </p>
+                    <p><strong>Status:</strong> {{flight.status}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h2 class="no-flights">There are no flights departing from {{airport}}</h2>
+    {% endif %}
+
+    <!-- Destination Airport Flights -->
+    {% if destination_flights %}
+        <h2 class="section-heading">Destination Airport Flights</h2>
+        <div class="flights-list">
+            {% for flight in destination_flights %}
+                <div class="flight-card">
+                    <p><strong>Airplane:</strong> {{flight.airplane}}</p>
+                    <p><strong>Date of Arrival:</strong> {{ frappe.format_date(flight.date_of_departure) }} </p>
+                    <p><strong>Status:</strong> {{flight.status}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h2 class="no-flights">There are no flights arriving at {{airport}}</h2>
+    {% endif %}
+
+    <a href="/airports">Back </a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/assets/airplane_mode/js/airports-details.js"></script>
+{% endblock %}

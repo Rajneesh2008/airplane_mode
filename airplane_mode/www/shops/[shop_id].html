@@ -1,18 +1,42 @@
 {% extends "templates/pages/base.html" %}
 
-{% block title %}Home Page{% endblock %}
+{% block title %}Shop Details{% endblock %}
 
 {% block head %}
-{{super()}}
-<!-- <link rel="stylesheet" href="/assets/airplane_mode/css/home.css"> -->
+
+<link rel="stylesheet" href="/assets/airplane_mode/css/singleShop.css">
 {% endblock %}
 
 {% block content %}
-<h1> Shop Detail page!</h1>
+<div class="content-container">
+
+
+    <div class="single-shop-container ">
+        <div class="image-container">
+            <img class="image" src="https://cdn.pixabay.com/photo/2017/07/31/19/27/coffee-2560260_1280.jpg"  alt="shop logo">
+        </div>
+
+        <div class="shop-detail-container">
+            <h2>{{ shop.shop_name }} ({{ shop.shop_number }})</h2>
+            <p class="status-badge">{{ shop.status }}</p>
+            <ul>
+            
+                <li><strong>Rent Amount:</strong> {{ shop.rent_amount }}</li>
+                {% if shop.tenant %}
+                <li><strong>Tenant:</strong> {{ shop.tenant }}</li>
+                {%endif%}
+                <li><strong>Contract Start Date: </strong> {{ frappe.format_date(shop.contract_start_date) }}</li>
+                <li><strong>Contract Expiry Date: </strong> {{ frappe.format_date(shop.contract_expire_date) }}</li>
+            </ul>
+            <a class="back-to-shop" href="/shops">Back</a>
+        </div>
+   
+    </div>
+</div>
 
 {% endblock %}
 
-<!-- {% block base_scripts %}
- <script src="/assets/airplane_mode/js/home.js"></script>
+ {% block scripts %}
+ <script src="/assets/airplane_mode/js/singleShop.js"></script>
 
-{% endblock %} -->
+{% endblock %}

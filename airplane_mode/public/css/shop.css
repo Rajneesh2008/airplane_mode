@@ -104,3 +104,15 @@ font-weight: 500;
 }
 
 
+.single-page-link{
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    background: #312913;
+    color: #fff;
+    margin-top: 12px;
+    &:hover{
+        background: #525a24;
+        transition: 0.3s;
+    }
+}
