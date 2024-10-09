@@ -10,7 +10,12 @@ Airports
 
 {% block content %}
 <div class="airports-container">
-    <h1 class="airport-title">Airports</h1>
+    <div class="search-box-container">
+        <h1 class="airport-title">Airports</h1>
+        <span>
+            <input id="search-airport" type="text" onchange="fun2(this)" placeholder="Enter city name...">
+        </span>
+    </div>
     {% if airports %}
     {% for airport in airports %}
     <div class="airport-item">

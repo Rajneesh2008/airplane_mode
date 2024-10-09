@@ -12,3 +12,11 @@ function toggleDetails(element) {
     arrowDown.classList.toggle('hidden');
     arrowUp.classList.toggle('hidden');
 }
+
+
+function fun2(element) {
+    let inp = element.value
+    console.log(inp)
+
+}
+

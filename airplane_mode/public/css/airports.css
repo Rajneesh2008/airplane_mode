@@ -4,11 +4,31 @@
     margin-bottom: 100px;
    
 }
-
-.airport-title{
-    margin: 20px 0px;
+.search-box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
+#search-airport{
+    padding: 10px;
+    border: 1px solid #525a24;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #525a24;
+    color: #fff;
+    width: 150px;
+    box-sizing: border-box;
+    &:focus{
+        outline-color:#ccb4a5 ;
+        outline-width:1px ;
+    }
+    &::placeholder{
+        color: #ccb4a5;
+    }
+
+}
 .airport-item {
     margin-bottom: 10px;
     border: 1px solid #ccb4a5;

@@ -37,19 +37,12 @@ website_route_rules = [
 # include js, css files in header of desk.html
 # app_include_css = "/assets/airplane_mode/css/airplane_mode.css"
 # app_include_js = "/assets/airplane_mode/js/airplane_mode.js"
-app_include_css = "/assets/airplane_mode/css/base.css"
-app_include_js = "/assets/airplane_mode/js/base.js"
-app_include_css = "/assets/airplane_mode/css/home.css"
-app_include_js = "/assets/airplane_mode/js/home.js"
-app_include_css = "/assets/airplane_mode/css/shop.css"
-app_include_js = "/assets/airplane_mode/js/shop.js"
+
 # include js, css files in header of web template
+
 # web_include_css = "/assets/airplane_mode/css/airplane_mode.css"
 # web_include_js = "/assets/airplane_mode/js/airplane_mode.js"
-web_include_css = "/assets/airplane_mode/css/home.css"
-web_include_js = "/assets/airplane_mode/js/home.js"
-web_include_css = "/assets/airplane_mode/css/shop.css"
-web_include_js = "/assets/airplane_mode/js/shop.js"
+
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "airplane_mode/public/scss/website"
 
@@ -165,7 +158,16 @@ page_js = {"page" : "public/js/file.js"}
 
 # Scheduled Tasks
 # ---------------
-
+scheduler_events = {
+    # daily check for contracts ending in 7 days
+    "daily": [
+        "airplane_mode.tasks.notify_contract_end" 
+    ],
+    # 1st day of each month for rent reminders
+    "monthly": [
+        "airplane_mode.tasks.create_monthly_rent_reminder"
+    ],
+}
 # scheduler_events = {
 # 	"all": [
 # 		"airplane_mode.tasks.all"

@@ -8,14 +8,12 @@
  "field_order": [
   "shop_name",
   "airport_name",
-  "contract_start_date",
   "rent_amount",
   "available_shop",
   "status",
   "column_break_yshp",
   "shop_number",
   "physical_area",
-  "contract_expiry_date",
   "tenant",
   "total_shop",
   "is_leach"
@@ -56,18 +54,6 @@
    "label": "Rent Amount",
    "non_negative": 1,
    "options": "INR",
-   "reqd": 1
-  },
-  {
-   "fieldname": "contract_start_date",
-   "fieldtype": "Date",
-   "label": "Contract Start Date ",
-   "reqd": 1
-  },
-  {
-   "fieldname": "contract_expiry_date",
-   "fieldtype": "Date",
-   "label": "Contract Expiry Date",
    "reqd": 1
   },
   {
@@ -120,7 +106,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-07 09:08:27.571875",
+ "modified": "2024-10-08 14:08:04.332537",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Shop",

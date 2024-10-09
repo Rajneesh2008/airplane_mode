@@ -32,7 +32,9 @@
   {
    "fieldname": "airplane",
    "fieldtype": "Link",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Airplane ",
    "options": "Airplane",
    "reqd": 1
@@ -62,6 +64,9 @@
    "default": "Scheduled",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Scheduled\nCompleted\nCancelled",
    "reqd": 1
@@ -79,6 +84,9 @@
   {
    "fieldname": "source",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Source",
    "options": "Airport",
    "reqd": 1
@@ -86,6 +94,9 @@
   {
    "fieldname": "destination",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Destination",
    "options": "Airport",
    "reqd": 1
@@ -161,7 +172,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-09-25 10:50:44.599964",
+ "modified": "2024-10-08 09:50:03.124988",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Flight",

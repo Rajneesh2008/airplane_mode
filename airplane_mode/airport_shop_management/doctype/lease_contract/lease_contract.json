@@ -41,23 +41,21 @@
    "label": "Rent Amount"
   },
   {
-   "fetch_from": "shop.contract_start_date",
    "fieldname": "contract_start_date",
-   "fieldtype": "Read Only",
+   "fieldtype": "Date",
    "label": "Contract Start Date ",
    "reqd": 1
   },
   {
-   "fetch_from": "shop.contract_expiry_date",
    "fieldname": "contract_expiry_date",
-   "fieldtype": "Read Only",
+   "fieldtype": "Date",
    "label": "Contract Expiry Date",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-02 08:43:00.233660",
+ "modified": "2024-10-08 14:04:34.115511",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Lease Contract",
