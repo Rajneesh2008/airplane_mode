@@ -6,7 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "description"
+  "description",
+  "amount"
  ],
  "fields": [
   {
@@ -15,11 +16,19 @@
    "in_list_view": 1,
    "label": "Description",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-24 18:59:19.752000",
+ "modified": "2024-10-09 12:12:06.166810",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Ticket Add-on Type",

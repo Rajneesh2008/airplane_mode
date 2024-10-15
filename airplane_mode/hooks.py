@@ -28,9 +28,14 @@ website_route_rules = [
     {"from_route": "/shops", "to_route": "shops"},
     {"from_route": "/shops/<shop_id>", "to_route": "shops/[shop_id]"},
     {"from_route":"/airports", "to_route":"airports"},
-    {"from_route":"/airports/<airports>", "to_route":"airports/[airports]"}
+    {"from_route":"/airports/<airports>", "to_route":"airports/[airports]"},
+    {"from_route":"/airports/flight-booking","to_route":"/airports/flight-booking"}
 ]
 
+# Whitelisted methods
+whitelisted_methods = [
+    "airplane_mode.api.create_ticket" 
+]
 
 # Includes in <head>
 # ------------------

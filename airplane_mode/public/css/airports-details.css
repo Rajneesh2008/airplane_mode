@@ -62,3 +62,11 @@ body, h2 {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
+.book-ticket-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ccb2a5;
+    padding: 4px 12px;
+    background: #332913;
+    border-radius: 4px;
+}

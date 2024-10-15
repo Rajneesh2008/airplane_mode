@@ -10,7 +10,7 @@ def get_context(context):
     if airport:
         filters["source"] = airport
 
-    source = frappe.get_list('Airplane Flight',filters=filters , fields=['airplane','date_of_departure', 'destination', 'status', 'source', 'source_airport_code','destination_airport_code', 'duration'])
+    source = frappe.get_list('Airplane Flight',filters=filters , fields=['airplane','name','date_of_departure', 'destination', 'status', 'source', 'source_airport_code','destination_airport_code', 'duration'])
 
     context.source_flights = source
    

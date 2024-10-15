@@ -1,0 +1,71 @@
+
+/* Booking Form Container */
+.booking-form {
+
+    background-color: #312913; /* Dark brown background for the form */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    color: #ccb4a5; /* Light beige text color */
+    margin:auto;
+    margin-top: 100px;
+   
+}
+
+/* Form Label Styling */
+.booking-form label {
+    display: block;
+    font-weight: bold;
+    color: #f1ecec; /* Light beige text color for labels */
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+/* Input Fields */
+.booking-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #525a24; /* Olive green border */
+    border-radius: 5px;
+    background-color: #525a24; /* Light brown background */
+    color: #fff; /* Dark brown text color */
+    font-size: 18px;
+    outline: none;
+}
+
+/* Input Focus Effect */
+.booking-form input[type="text"]:focus {
+    border-color: #ccb4a5; /* Light beige on focus */
+    box-shadow: 0 0 5px rgba(204, 180, 165, 0.5);
+}
+
+/* Submit Button */
+.booking-form button[type="submit"] {
+    background-color: #525a24; /* Olive green button background */
+    color: #ccb4a5; /* Light beige text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button Hover Effect */
+.booking-form button[type="submit"]:hover {
+    background-color: #966e36; /* Light brown hover effect */
+    transform: translateY(-3px);
+}
+
+/* Button Active Effect */
+.booking-form button[type="submit"]:active {
+    transform: translateY(0);
+    background-color: #312913; /* Dark brown active state */
+}
+
+

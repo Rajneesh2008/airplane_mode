@@ -13,7 +13,8 @@ Airports
     <div class="search-box-container">
         <h1 class="airport-title">Airports</h1>
         <span>
-            <input id="search-airport" type="text" onchange="fun2(this)" placeholder="Enter city name...">
+            <input id="search-airport" class="search-box" type="text" placeholder="Enter city name...">
+            <button class="search-airport-btn">Search</button>
         </span>
     </div>
     {% if airports %}
@@ -22,7 +23,7 @@ Airports
         <div class="airport-card">
             <div class="logo-container">
                 <img src="https://svgsilh.com/svg/153136-ffffff.svg" width="200px" height="100px" alt="Airport Logo">
-                <h2>{{airport.name}}</h3>
+                <h2>{{airport.name}}</h2>
             </div>
             <div class="arrow-container" onclick="toggleDetails(this)">
                 <div class="drop-down arrow-down">
@@ -37,12 +38,14 @@ Airports
             <div class="airport-details-card">
                 <p>City : {{airport.city}}</p>
                 <p>Airport Code : {{airport.code}}</p>
-                <p>country : {{airport.country}}</p>
+                <p>Country : {{airport.country}}</p>
                 <a href="/airports/{{airport.name | urlencode  }}" class="link-flight-show">Show Flights</a>
             </div>
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <p class="no-airports found">Sorry, No airports found</p>
     {% endif %}
 </div>
 {% endblock %}

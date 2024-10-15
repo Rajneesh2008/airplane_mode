@@ -2,56 +2,60 @@ import frappe
 from frappe.utils import add_days, today
 
 
-def run_test1():
-    print("Hi test")
+def send_test_email():
 
-
-def send_test_email(recipient_email):
-    print("Hello test")
     try:
         frappe.sendmail(
-            recipients=recipient_email,
+            recipients="rajneeshyadav1107@gmail.com",
             subject="Test Email from Frappe",
-            message="This is a test email to verify SMTP configuration in Frappe."
+            message="This is a test email to verify SMTP configuration in Frappe.",
+            delayed=False
         )
-        print("Email send ")
         frappe.msgprint("Test email sent successfully!")
     except Exception as e:
         print(f"Failed to send test email: {e}")  # This will help you see the error in the console.
         frappe.msgprint(f"Failed to send test email: {e}")
 
+import frappe
+from frappe.utils import today, add_days
+
 def notify_contract_end():
-    # Fetch contracts expiring in the next 7 days
+    # Fetch contracts expiring within the next 7 days
+    print("Fetching contracts expiring in the next 7 days...")
     contracts = frappe.get_all(
         "Lease Contract",
-        filters={"contract_expiry_date": add_days(today(), 7)},
-        fields=["tenant", "shop"]
+        filters={
+            "contract_expiry_date": ["between", [today(), add_days(today(), 7)]]
+        },
+        fields=["tenant", "shop", "contract_expiry_date"]
     )
 
+    # Check if any contracts were found
+    if not contracts:
+        print("No contracts expiring in the next 7 days.")
+        return
+
+    print(f"Found {len(contracts)} contracts expiring soon.")
     for contract in contracts:
-        tenant_email = frappe.db.get_value("Tenant", contract.tenant, "email")  # Get tenant's email
-        shop_name = frappe.db.get_value("Shop", contract.shop, "shop_name")  # Get shop name
-        
+        print(f"Processing contract: {contract}")
+
+        # Get tenant's email
+        tenant_email = frappe.db.get_value("Tenant", contract.tenant, "email")
+        shop_name = frappe.db.get_value("Shop", contract.shop, "shop_name")
+
         if tenant_email:
+            # Send reminder email
             frappe.sendmail(
-                recipients=tenant_email,
+                recipients=[tenant_email],
                 subject="Shop Contract Ending Soon",
-                message=f"Your contract for the shop '{shop_name}' will expire in 7 days. Please contact us if you need to renew it."
+                message=(
+                    f"Dear Tenant,\n\n"
+                    f"Your contract for the shop '{shop_name}' will expire on "
+                    f"{contract.contract_expiry_date}. Please contact us if you "
+                    f"wish to renew it.\n\nThank you."
+                ),
+                delayed=False
             )
-
-
-def create_monthly_rent_reminder():
-    tenants = frappe.get_all("Tenant", fields=["tenant_name", "email"])
-
-    for tenant in tenants:
-        # Create an Event in Frappe to remind tenants about rent
-        event = frappe.get_doc({
-            "doctype": "Event",
-            "subject": "Monthly Rent Payment Reminder",
-            "description": f"Reminder for {tenant.name} to pay rent for the current month.",
-            "event_type": "Private",
-            "starts_on": today(),
-            "all_day": 1,
-            "owner": tenant.email
-        })
-        event.insert(ignore_permissions=True)
+            print(f"Email sent successfully to {tenant_email}.")
+        else:
+            print(f"No email found for tenant: {contract.tenant}.")

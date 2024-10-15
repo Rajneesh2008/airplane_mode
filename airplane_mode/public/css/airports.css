@@ -29,6 +29,15 @@
     }
 
 }
+
+.search-airport-btn{
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #312913;
+    cursor: pointer;
+    border-radius: 8px;
+}
 .airport-item {
     margin-bottom: 10px;
     border: 1px solid #ccb4a5;

@@ -16,9 +16,11 @@ Airplanes
         <div class="flights-list">
             {% for flight in source_flights %}
                 <div class="flight-card">
+                    <p><strong>Flight Name:</strong>{{flight.name}}</p>
                     <p><strong>Airplane:</strong> {{flight.airplane}}</p>
                     <p><strong>Date of Departure:</strong> {{ frappe.format_date(flight.date_of_departure) }} </p>
                     <p><strong>Status:</strong> {{flight.status}}</p>
+                    <a href="/airports/flight-booking?flight={{flight.name}}" class="book-ticket-btn">Book Ticket</a>
                 </div>
             {% endfor %}
         </div>

@@ -1,0 +1,26 @@
+{% extends "templates/pages/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/airplane_mode/css/flight-booking.css">
+{% endblock %}
+
+{% block content %}
+<!-- flight_booking.html -->
+<div class="booking-form">
+    <form id="flight-booking-form" onsubmit="event.preventDefault(); bookTicket();">
+        <input type="hidden" name="csrf" id="csrf" value="{{ csrf}}">
+        
+        <label>Flight Name:</label>
+        <input type="text" id="flight_name" value="{{ flightName }}" placeholder="Enter Flight Name">
+        
+        <label>Passenger Name:</label>
+        <input type="text" id="passenger_name" placeholder="Enter Passenger Name">
+        
+        <button type="submit">Book Ticket</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/assets/airplane_mode/js/flight-booking.js"></script>
+{% endblock %}
