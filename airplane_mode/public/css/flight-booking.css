@@ -1,4 +1,36 @@
 
+
+.pop-up-container{
+    background-color: #312913;
+    width: 30%;
+    height: rem;
+    border-radius: 12px;
+    margin: 20px auto;
+    z-index: 50;
+    padding: 20px 30px;
+}
+.pop-up-title{
+    font-family: sans-serif;
+    color: #ccb4a5;
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+.loggin-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ccb4a5;
+    padding: 8px 12px;
+    font-size: 22px;
+    background: #966e36;
+    border-radius: 4px;
+    margin: auto;
+    &:hover{
+        color: #fff;
+        transition: 0.5s;
+    }
+    
+}
+
 /* Booking Form Container */
 .booking-form {
 

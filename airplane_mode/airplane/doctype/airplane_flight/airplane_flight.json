@@ -17,9 +17,11 @@
   "airport_details_section",
   "source",
   "source_airport_code",
+  "source_city",
   "column_break_nibc",
   "destination",
   "destination_airport_code",
+  "destination_city",
   "departure_details_section",
   "date_of_departure",
   "duration",
@@ -168,6 +170,18 @@
    "label": "Amount",
    "non_negative": 1,
    "reqd": 1
+  },
+  {
+   "fetch_from": "source.city",
+   "fieldname": "source_city",
+   "fieldtype": "Read Only",
+   "label": "Source City"
+  },
+  {
+   "fetch_from": "destination.city",
+   "fieldname": "destination_city",
+   "fieldtype": "Read Only",
+   "label": "Destination City"
   }
  ],
  "has_web_view": 1,
@@ -180,7 +194,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2024-10-09 11:39:13.038254",
+ "modified": "2024-10-15 14:12:09.638753",
  "modified_by": "Administrator",
  "module": "Airplane",
  "name": "Airplane Flight",
@@ -240,6 +254,15 @@
    "read": 1,
    "report": 1,
    "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
    "share": 1
   }
  ],

@@ -1,24 +1,37 @@
 {% extends "templates/pages/base.html" %}
 
+{% block title %}
+Flight Booking
+{%endblock%}
 {% block head %}
 <link rel="stylesheet" href="/assets/airplane_mode/css/flight-booking.css">
 {% endblock %}
 
 {% block content %}
 <!-- flight_booking.html -->
-<div class="booking-form">
-    <form id="flight-booking-form" onsubmit="event.preventDefault(); bookTicket();">
-        <input type="hidden" name="csrf" id="csrf" value="{{ csrf}}">
-        
-        <label>Flight Name:</label>
-        <input type="text" id="flight_name" value="{{ flightName }}" placeholder="Enter Flight Name">
-        
-        <label>Passenger Name:</label>
-        <input type="text" id="passenger_name" placeholder="Enter Passenger Name">
-        
-        <button type="submit">Book Ticket</button>
-    </form>
-</div>
+ {% if isGuest %}
+    <div class="pop-up-container">
+        <h3 class="pop-up-title">Please! Logged-in.</h3>
+        <div>
+
+            <a href="http://development.localhost:8000/login?redirect-to=airports/flight-booking?flight={{flightName | urlencode}}" class="loggin-btn">Login</a>
+        </div>
+    </div>
+  {%else %} 
+    <div class="booking-form">
+        <form id="flight-booking-form" onsubmit="event.preventDefault(); bookTicket();">
+            <input type="hidden" name="csrf" id="csrf" value="{{ csrf}}">
+            
+            <label>Flight Name:</label>
+            <input type="text" id="flight_name" value="{{ flightName }}" placeholder="Enter Flight Name">
+            
+            <label>Passenger Name:</label>
+            <input type="text" id="passenger_name" placeholder="Enter Passenger Name">
+            
+            <button type="submit">Book Ticket</button>
+        </form>
+    </div>
+    {%endif%}
 {% endblock %}
 
 {% block scripts %}

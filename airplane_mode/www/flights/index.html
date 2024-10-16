@@ -1,0 +1,56 @@
+{% extends 'templates/pages/base.html' %}
+
+{% block title %}
+Flights
+{% endblock%}
+
+
+{% block head%}
+<link rel="stylesheet" href="/assets/airplane_mode/css/flights.css">
+{%endblock%}
+
+{% block content %}
+
+    <div class="flights-search-container">
+        <div class="source_city_container">
+            <label for="source_city">Source</label>
+            <input type="text" name="source_city" id="source_city" required class="source_city" placeholder="Source City">
+        </div>
+        <div class="destination_city_container">
+            <label for="source_city">Destination</label>
+            <input type="text" name="destination" id="destination_" required class="destination_city" placeholder="Destination City">
+        </div>
+        <div class="time_container">
+            <label for="">Time</label>
+            <input type="date" name="departure" id="departure" class="departure_date">
+        </div>
+        <button class="search-flight-btn" >Search</button>
+    </div>
+
+    {% if flights %}
+    
+    <div class="flights-container">
+        
+        <div class="flights-list">
+            {% for flight in flights %}
+            <div class="flight-card">
+                <p><strong>Flight Name:</strong>{{flight.name}}</p>
+                <p><strong>Airplane:</strong> {{flight.airplane}}</p>
+                <p><strong>Date of Departure:</strong> {{ frappe.format_date(flight.date_of_departure) }} </p>
+                <p><strong>Status:</strong> {{flight.status}}</p>
+                <a href="/airports/flight-booking?flight={{flight.name}}" class="book-ticket-btn">Book Ticket</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <div class="no-flights ">
+        <p>No flights are availabel between {{source}} to {{destination}} on {{date_of_departure}}</p>
+    </div>
+        {% endif %}
+{% endblock %}
+
+
+{% block scripts %}
+<script src="/assets/airplane_mode/js/flights.js" ></script>
+{% endblock %}

@@ -1,5 +1,5 @@
 function bookTicket() {
-    console.log("Booking ticket...");
+ 
     
     const flightName = document.getElementById("flight_name").value;
     const passengerName = document.getElementById("passenger_name").value;

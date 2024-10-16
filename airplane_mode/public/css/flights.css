@@ -1,0 +1,121 @@
+.flights-search-container{
+    width: 100%;
+    background-color: #312913;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    max-width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 30px;
+    color: #ccb4a5;
+}
+.source_city_container,.destination_city_container,.time_container label{
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 22px;
+    
+}
+
+.source_city,.destination_city,.departure_date{
+    offset: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #525a24;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #525a24;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.search-flight-btn{
+    padding: 12px 24px;
+    background-color: #966e36;
+    color: #0d1c07;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+
+/* Container for flights */
+.flights-container,.no-flights  {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ccb4a5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+}
+.no-flights {
+    color: #0d1c07;
+}
+/* Section Heading */
+.section-heading {
+    font-size: 24px;
+    color: #525a24;
+    margin-bottom: 15px;
+}
+
+/* No Flights Message */
+.no-flights {
+    color: #966e36;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Flight List Container */
+.flights-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Flight Card */
+.flight-card {
+    background-color: #525a24;
+    color: #ccb4a5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Flight Card Text */
+.flight-card p {
+    margin: 10px 0;
+}
+
+/* Strong Text for Flight Details */
+.flight-card p strong {
+    color: #966e36;
+}
+
+/* Typography */
+body, h2 {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+.book-ticket-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ccb2a5;
+    padding: 4px 12px;
+    background: #332913;
+    border-radius: 4px;
+}

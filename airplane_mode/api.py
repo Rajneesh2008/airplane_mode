@@ -1,7 +1,7 @@
 # In your_app/api.py
 import frappe
 
-@frappe.whitelist(allow_guest=True)
+@frappe.whitelist()
 def create_ticket(flight_name, passenger_name):
     
     print(flight_name,passenger_name)
