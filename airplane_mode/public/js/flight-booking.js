@@ -19,13 +19,25 @@ function bookTicket() {
     .then(response => response.json())
     .then(data => {
         if (data.message) {
-            alert("Ticket booked successfully!");
+            console.log(data.passenger,data,"hello from line 22")
+            const formBookingContainer = document.querySelector(".booking-form")
+            const bookedTickedStatus = document.querySelector(".booked-ticket-container")
+            const ticketDetailsContainer = document.querySelector(".ticket-details")
+                 ticketDetailsContainer.innerHTML = ""
+            let  ticketDetails = document.createElement("p")
+                  ticketDetails.innerHTML = `Hi ${data?.message?.passenger}, your ticket is booked successfully on ${data?.message?.departure_date}.Thank you for Choosing us! 😊`
+                  formBookingContainer.style.display = "none"
+                  bookedTickedStatus.style.display = "block"
+                  ticketDetailsContainer.append(ticketDetails)
+            
            let id;
            if(id) clearTimeout(id)
 
             id = setTimeout(()=>{
-                window.location.href ="http://development.localhost:8000/airports"
-            },1000)
+                formBookingContainer.style.display = "block"
+                bookedTickedStatus.style.display = "none"
+                
+            },10000)
         } else {
             alert("Failed to book ticket. Please try again.");
         }

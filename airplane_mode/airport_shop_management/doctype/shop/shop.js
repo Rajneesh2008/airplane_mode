@@ -3,13 +3,14 @@
 
 frappe.ui.form.on("Shop", {
   refresh(frm) {
-      if(!frm.doc?.is_leach){
-
-        if(frm.doc?.tenant){
-          frm.set_value("is_leach",1)
-          frm.save()
-        }
-
+      if(frm.doc?.tenant){
+        frm.set_value("is_leach",1)
+        frm.set_value("status","Occupied")
+        frm.save()
+      }else{
+        frm.set_value("is_leach",0)
+        frm.set_value("status","Available")
+        frm.save()
       }
       // Fetch all Shop records to calculate total and available shops
       frappe.call({

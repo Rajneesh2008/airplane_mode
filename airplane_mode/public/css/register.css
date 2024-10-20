@@ -1,0 +1,68 @@
+.parent-container {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.child-container {
+    width: 50%;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: #ccb4a5 0px 2px 8px 0px;
+    background-color: #312913;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #ccb4a5;
+}
+.email-container,.fullName-container,.password-container{
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+
+
+.email-container label, .password-container label,.fullName-container label {
+    font-size: 18px;
+    color:#ccb4a5;;
+}
+
+.email, .password,.fullName {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #525a24;
+    color: #fff;
+    font-size: 18px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color:#966e36
+    ;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition-duration: 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #525a24;
+}

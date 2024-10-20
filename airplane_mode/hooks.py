@@ -30,7 +30,8 @@ website_route_rules = [
     {"from_route":"/airports", "to_route":"airports"},
     {"from_route":"/airports/<airports>", "to_route":"airports/[airports]"},
     {"from_route":"/airports/flight-booking","to_route":"/airports/flight-booking"},
-    {"from_route":"/flights","to_route":"/flights"}
+    {"from_route":"/flights","to_route":"/flights"},
+    {"from_route":"/login-page","to_route":"/login-page"}
 ]
 
 # Whitelisted methods

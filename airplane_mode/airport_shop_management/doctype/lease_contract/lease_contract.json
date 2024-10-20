@@ -10,7 +10,8 @@
   "shop",
   "rent_amount",
   "contract_start_date",
-  "contract_expiry_date"
+  "contract_expiry_date",
+  "contract_duration"
  ],
  "fields": [
   {
@@ -51,11 +52,17 @@
    "fieldtype": "Date",
    "label": "Contract Expiry Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "contract_duration",
+   "fieldtype": "Data",
+   "label": "Contract Duration",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-08 14:04:34.115511",
+ "modified": "2024-10-17 12:23:51.160208",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Lease Contract",

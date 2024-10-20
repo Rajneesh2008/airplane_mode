@@ -14,12 +14,12 @@ Flight Booking
         <h3 class="pop-up-title">Please! Logged-in.</h3>
         <div>
 
-            <a href="http://development.localhost:8000/login?redirect-to=airports/flight-booking?flight={{flightName | urlencode}}" class="loggin-btn">Login</a>
+            <a href="/login-page?redirect-to=airports/flight-booking?flight={{flightName | urlencode}}" class="loggin-btn">Login</a>
         </div>
     </div>
   {%else %} 
     <div class="booking-form">
-        <form id="flight-booking-form" onsubmit="event.preventDefault(); bookTicket();">
+        <form  style="display: block;" id="flight-booking-form"  onsubmit="event.preventDefault(); bookTicket();">
             <input type="hidden" name="csrf" id="csrf" value="{{ csrf}}">
             
             <label>Flight Name:</label>
@@ -32,6 +32,11 @@ Flight Booking
         </form>
     </div>
     {%endif%}
+
+    <div class="pop-up-container booked-ticket-container"  style="display: none;">
+        <h3 class="pop-up-title">Ticket Booked</h3>
+        <div class="ticket-details"></div>
+    </div>
 {% endblock %}
 
 {% block scripts %}
